@@ -119,6 +119,9 @@ export enum Kind  {
   StreamMuteList = 10_555,
 
   CategorizedPeople = 30_000,
+  CommunityDefinition = 30_000,
+  CommunityMembership = 30_001,
+  CommunityList = 30_003,
   LongForm = 30_023,
   Settings = 30_078,
   LiveEvent = 30_311,

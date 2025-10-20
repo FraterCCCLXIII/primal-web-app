@@ -1209,6 +1209,46 @@ export type UserCategory = {
   members: { name?: string, pubkey: string }[],
 }
 
+export type PrimalGroup = {
+  id: string,
+  name: string,
+  description?: string,
+  image?: string,
+  picture?: string,
+  about?: string,
+  pubkey: string,
+  created_at: number,
+  tags: string[][],
+  member_count?: number,
+  recent_posts?: number,
+  is_private?: boolean,
+  is_member?: boolean,
+  is_admin?: boolean,
+}
+
+export type PrimalCommunity = {
+  id: string,
+  name: string,
+  description?: string,
+  image?: string,
+  picture?: string,
+  about?: string,
+  pubkey: string,
+  created_at: number,
+  tags: string[][],
+  member_count?: number,
+  is_private?: boolean,
+  is_member?: boolean,
+  is_admin?: boolean,
+}
+
+export type GroupMembership = {
+  pubkey: string,
+  group_id: string,
+  role: 'admin' | 'moderator' | 'member',
+  created_at: number,
+}
+
 export type SelectionOption = {
   label: string,
   value: string,

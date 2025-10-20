@@ -221,6 +221,38 @@ export const getEvents = (user_pubkey: string | undefined, eventIds: string[], s
 
 };
 
+export const getEventsByKind = (user_pubkey: string | undefined, kinds: number[], subid: string, limit = 100, until = 0, since = 0) => {
+  // Use mega_feed_directive with a spec that filters by kinds
+  const spec = JSON.stringify({
+    kinds: kinds,
+    limit: limit
+  });
+
+  let payload = { spec, limit };
+
+  if (user_pubkey) {
+    // @ts-ignore
+    payload.user_pubkey = user_pubkey;
+  }
+
+  if (until > 0) {
+    // @ts-ignore
+    payload.until = until;
+  }
+
+  if (since > 0) {
+    // @ts-ignore
+    payload.since = since;
+  }
+
+  console.log('Sending getEventsByKind request:', { subid, payload });
+  sendMessage(JSON.stringify([
+    "REQ",
+    subid,
+    {cache: ["mega_feed_directive", payload]},
+  ]));
+};
+
 export const getUserFeed = (user_pubkey: string | undefined, pubkey: string | undefined, subid: string, notes: 'authored' | 'replies' | 'bookmarks' | 'user_media_thumbnails', kind: number | undefined, until = 0, limit = 20, offset = 0) => {
   if (!pubkey) {
     return;

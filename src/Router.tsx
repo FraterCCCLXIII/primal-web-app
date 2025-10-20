@@ -26,6 +26,9 @@ const ExploreFeeds = lazy(() => import('./pages/Explore/ExploreFeeds'));
 const Thread = lazy(() => import('./pages/Thread'));
 const DirectMessages = lazy(() => import('./pages/DirectMessages'));
 const Bookmarks = lazy(() => import('./pages/Bookmarks'));
+const Groups = lazy(() => import('./pages/Groups'));
+const CreateGroup = lazy(() => import('./pages/CreateGroup'));
+const GroupDetail = lazy(() => import('./pages/GroupDetail'));
 const Notifications = lazy(() => import('./pages/Notifications'));
 const Downloads = lazy(() => import('./pages/Downloads'));
 const Settings = lazy(() => import('./pages/Settings/Settings'));
@@ -165,6 +168,11 @@ const AppRouter: Component = () => {
             <Route path="/uploads" component={Blossom} />
           </Route>
           <Route path="/bookmarks" component={Bookmarks} />
+          <Route path="/groups">
+            <Route path="/" component={Groups} />
+            <Route path="/create" component={CreateGroup} />
+            <Route path="/:id" component={GroupDetail} />
+          </Route>
           <Route path="/settings/profile" component={EditProfile} />
           <Route path="/profile/:npub?" component={Profile} />
           <Route path="/p/:npub?">

@@ -52,6 +52,11 @@ const NavMenu: Component< { id?: string } > = (props) => {
       icon: 'bookmarkIcon',
     },
     {
+      to: '/groups',
+      label: intl.formatMessage(t.groups),
+      icon: 'groupsIcon',
+    },
+    {
       to: '/notifications',
       label: intl.formatMessage(t.notifications),
       icon: 'notificationsIcon',

@@ -899,6 +899,11 @@ export const navBar = {
     defaultMessage: 'Premium',
     description: 'Label for the nav bar item link to Premium page',
   },
+  groups: {
+    id: 'navbar.groups',
+    defaultMessage: 'Groups',
+    description: 'Label for the nav bar item link to Groups page',
+  },
   settings: {
     id: 'navbar.settings',
     defaultMessage: 'Settings',
@@ -3037,4 +3042,107 @@ export const readsMy = {
     description: 'No published articles label',
   },
 
+}
+
+export const groups = {
+  pageCaption: {
+    id: 'pages.groups.pageCaption',
+    defaultMessage: 'Groups',
+    description: 'Groups page caption',
+  },
+  createGroup: {
+    id: 'pages.groups.createGroup',
+    defaultMessage: 'Create Group',
+    description: 'Create group button label',
+  },
+  joinGroup: {
+    id: 'pages.groups.joinGroup',
+    defaultMessage: 'Join Group',
+    description: 'Join group button label',
+  },
+  leaveGroup: {
+    id: 'pages.groups.leaveGroup',
+    defaultMessage: 'Leave Group',
+    description: 'Leave group button label',
+  },
+  groupName: {
+    id: 'pages.groups.groupName',
+    defaultMessage: 'Group Name',
+    description: 'Group name field label',
+  },
+  groupDescription: {
+    id: 'pages.groups.groupDescription',
+    defaultMessage: 'Group Description',
+    description: 'Group description field label',
+  },
+  groupImage: {
+    id: 'pages.groups.groupImage',
+    defaultMessage: 'Group Image',
+    description: 'Group image field label',
+  },
+  privateGroup: {
+    id: 'pages.groups.privateGroup',
+    defaultMessage: 'Private Group',
+    description: 'Private group checkbox label',
+  },
+  publicGroup: {
+    id: 'pages.groups.publicGroup',
+    defaultMessage: 'Public Group',
+    description: 'Public group checkbox label',
+  },
+  noGroups: {
+    id: 'pages.groups.noGroups',
+    defaultMessage: 'No groups found',
+    description: 'No groups found message',
+  },
+  memberCount: {
+    id: 'pages.groups.memberCount',
+    defaultMessage: '{{count}} members',
+    description: 'Group member count',
+  },
+  createdBy: {
+    id: 'pages.groups.createdBy',
+    defaultMessage: 'Created by',
+    description: 'Created by label',
+  },
+  groupSettings: {
+    id: 'pages.groups.groupSettings',
+    defaultMessage: 'Group Settings',
+    description: 'Group settings label',
+  },
+  deleteGroup: {
+    id: 'pages.groups.deleteGroup',
+    defaultMessage: 'Delete Group',
+    description: 'Delete group button label',
+  },
+  editGroup: {
+    id: 'pages.groups.editGroup',
+    defaultMessage: 'Edit Group',
+    description: 'Edit group button label',
+  },
+  groupCreated: {
+    id: 'pages.groups.groupCreated',
+    defaultMessage: 'Group created successfully',
+    description: 'Group created success message',
+  },
+  groupUpdated: {
+    id: 'pages.groups.groupUpdated',
+    defaultMessage: 'Group updated successfully',
+    description: 'Group updated success message',
+  },
+  groupDeleted: {
+    id: 'pages.groups.groupDeleted',
+    defaultMessage: 'Group deleted successfully',
+    description: 'Group deleted success message',
+  },
+  joinGroupSuccess: {
+    id: 'pages.groups.joinGroupSuccess',
+    defaultMessage: 'Successfully joined group',
+    description: 'Join group success message',
+  },
+  leaveGroupSuccess: {
+    id: 'pages.groups.leaveGroupSuccess',
+    defaultMessage: 'Successfully left group',
+    description: 'Leave group success message',
+  },
 }
