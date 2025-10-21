@@ -114,6 +114,23 @@ The caching service and the upload server urls can be configured with the follow
 This code is still very much a work-in-progress. Expect major changes of the structure and logic to be happening somewhat frequently.
 Major features are still missing.
 
+#### Deactivated Features
+
+The following features have been temporarily deactivated in this fork but the code remains intact:
+
+- **Downloads**: The downloads page and navigation link have been removed from the left navigation menu. The route `/downloads` is commented out in the router but the page component (`/pages/Downloads`) remains available for future reactivation.
+
+- **Premium**: All premium-related features have been deactivated including:
+  - Premium page (`/premium/:step?`)
+  - Premiums page (`/premiums`) 
+  - Legends page (`/legends`)
+  - Premium navigation links in both main and live navigation menus
+
+These features can be easily reactivated by:
+1. Uncommenting the navigation links in `NavMenu.tsx` and `LiveNavMenu.tsx`
+2. Uncommenting the routes in `Router.tsx`
+3. The page components remain intact and functional
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->

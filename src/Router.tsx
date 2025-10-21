@@ -147,8 +147,9 @@ const AppRouter: Component = () => {
           {/* <Route path="/explore/:scope?/:timeframe?" component={Explore} /> */}
           <Route path="/dms/:contact?" component={DirectMessages} />
           <Route path="/notifications" component={Notifications} />
-          <Route path="/downloads" component={Downloads} />
-          <Route path="/download" component={() => <Navigate href='/downloads' />} />;
+          {/* Downloads and Premium features have been deactivated */}
+          {/* <Route path="/downloads" component={Downloads} /> */}
+          {/* <Route path="/download" component={() => <Navigate href='/downloads' />} /> */}
           <Route path="/settings" component={Settings}>
             <Route path="/" component={Menu} />
             <Route path="/account" component={Account} />
@@ -184,9 +185,10 @@ const AppRouter: Component = () => {
             <Route path="/" component={AdvancedSearch} />
             <Route path="/:query" component={AdvancedSearchResults} />
           </Route>
-          <Route path="/premium/:step?" component={Premium} />
-          <Route path="/premiums" component={Premiums} />
-          <Route path="/legends" component={Legends} />
+          {/* Premium features have been deactivated */}
+          {/* <Route path="/premium/:step?" component={Premium} /> */}
+          {/* <Route path="/premiums" component={Premiums} /> */}
+          {/* <Route path="/legends" component={Legends} /> */}
           <Route path="/:vanityName">
             <Route path="/" component={Profile} preload={getKnownProfiles} />
             <Route path="/live/:streamId?" component={Streaming} />

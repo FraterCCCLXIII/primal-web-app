@@ -90,6 +90,20 @@ const Menu: Component = () => {
             <div class={styles.chevron}></div>
           </A>
         </Show>
+
+        <Show when={account?.sec}>
+          <A 
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              account?.actions.logout();
+              navigate('/home');
+            }}
+          >
+            {intl.formatMessage(tActions.logout)}
+            <div class={styles.chevron}></div>
+          </A>
+        </Show>
       </div>
 
       <Show when={account?.sec}>

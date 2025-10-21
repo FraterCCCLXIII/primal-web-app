@@ -58,19 +58,20 @@ const NavMenu: Component< { id?: string } > = (props) => {
       bubble: () => notifications?.notificationCount || 0,
       hiddenOnSmallScreens: true,
     },
-    {
-      to: '/downloads',
-      label: intl.formatMessage(t.downloads),
-      icon: 'downloadIcon',
-      bubble: () => notifications?.downloadsCount || 0,
-    },
-    {
-      to: '/premium',
-      label: intl.formatMessage(t.premium),
-      icon: 'premiumIcon',
-      hiddenOnSmallScreens: true,
-      bubble: () => account?.premiumReminder ? 1 : 0,
-    },
+    // Downloads and Premium features have been deactivated
+    // {
+    //   to: '/downloads',
+    //   label: intl.formatMessage(t.downloads),
+    //   icon: 'downloadIcon',
+    //   bubble: () => notifications?.downloadsCount || 0,
+    // },
+    // {
+    //   to: '/premium',
+    //   label: intl.formatMessage(t.premium),
+    //   icon: 'premiumIcon',
+    //   hiddenOnSmallScreens: true,
+    //   bubble: () => account?.premiumReminder ? 1 : 0,
+    // },
     {
       to: '/settings',
       label: intl.formatMessage(t.settings),

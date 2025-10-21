@@ -43,21 +43,22 @@ const NavPhone: Component< { id?: string } > = (props) => {
       label: intl.formatMessage(t.explore),
       icon: 'exploreIcon',
     },
-    {
-      type: 'link',
-      to: '/downloads',
-      label: intl.formatMessage(t.downloads),
-      icon: 'downloadIcon',
-      bubble: () => notifications?.downloadsCount || 0,
-    },
-    {
-      type: 'link',
-      to: '/premium',
-      label: intl.formatMessage(t.premium),
-      icon: 'premiumIcon',
-      hiddenOnSmallScreens: true,
-      bubble: () => account?.premiumReminder ? 1 : 0,
-    },
+    // Downloads and Premium features have been deactivated
+    // {
+    //   type: 'link',
+    //   to: '/downloads',
+    //   label: intl.formatMessage(t.downloads),
+    //   icon: 'downloadIcon',
+    //   bubble: () => notifications?.downloadsCount || 0,
+    // },
+    // {
+    //   type: 'link',
+    //   to: '/premium',
+    //   label: intl.formatMessage(t.premium),
+    //   icon: 'premiumIcon',
+    //   hiddenOnSmallScreens: true,
+    //   bubble: () => account?.premiumReminder ? 1 : 0,
+    // },
     {
       type: 'menu',
       links: [
